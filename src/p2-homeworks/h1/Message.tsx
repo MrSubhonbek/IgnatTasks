@@ -16,7 +16,7 @@ function Message(props: IProps) {
                 <div className={staly.d33}>
                     <div>
                         <div>{props.name}</div>
-                        <div className={staly.text}>{props.message}</div>
+                        <div>{props.message}</div>
                     </div>
                     <div className={staly.time}>{props.time}</div>
                 </div>
