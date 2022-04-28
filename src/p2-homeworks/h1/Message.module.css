@@ -1,3 +1,42 @@
+img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 10px;
+}
+.text{
+    font-size: 0.75em;
+}
 .message {
-
+    display: inline-flex;
+}
+.inMessage{
+    border-radius: 10px;
+    border: solid 2px;
+    border-color: aqua;
+    padding: 10px;
+    display: inline-flex;
+}
+.time{
+    margin-left: 20px;
+    font-size: 0.75em;
+}
+.d33 {
+    display: inline-flex;
+    margin-left: 26px;
+    padding: 10px;
+    background: #B5DDD4;
+    position: relative;
+    border-radius: 10px;
+}
+.d33:before {
+    content: "";
+    width: 0; 
+    height: 0;
+    position: absolute; 
+    right: 100%; 
+    top: calc(50% - 12px);
+    border-top: 12px solid transparent;
+    border-right: 24px solid #B5DDD4;
+    border-bottom: 12px solid transparent;
 }
