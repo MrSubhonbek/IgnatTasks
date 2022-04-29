@@ -8,12 +8,13 @@ interface IProps {
     time: string
 }
 
+
 function Message(props: IProps) {
     return (
         <div>
             <div className={staly.message}>
                 <img src={props.avatar} alt="avatar" />
-                <div className={staly.d33}>
+                <div className={staly.innerMessage}>
                     <div>
                         <div>{props.name}</div>
                         <div>{props.message}</div>
@@ -24,5 +25,4 @@ function Message(props: IProps) {
         </div>
     )
 }
-
 export default Message
