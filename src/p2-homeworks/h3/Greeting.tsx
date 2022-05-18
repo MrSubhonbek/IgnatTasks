@@ -1,13 +1,14 @@
-import React from 'react'
+import React, { MouseEventHandler } from 'react'
 import s from './Greeting.module.css'
 
 type GreetingPropsType = {
-    name: any // need to fix any
-    setNameCallback: any // need to fix any
-    addUser: any // need to fix any
-    error: any // need to fix any
+    name: string // need to fix any
+    setNameCallback: (e:React.ChangeEvent<HTMLInputElement>)=>void // need to fix any
+    addUser: ()=>void // need to fix any
+    error: string // need to fix any
     totalUsers: any // need to fix any
 }
+
 
 // презентационная компонента (для верстальщика)
 const Greeting: React.FC<GreetingPropsType> = (
@@ -17,10 +18,11 @@ const Greeting: React.FC<GreetingPropsType> = (
 
     return (
         <div>
-            <input value={name} onChange={setNameCallback} className={inputClass}/>
-            <span>{error}</span>
+            <input value={name} onChange={setNameCallback} className={error ? inputClass : ""}/>
             <button onClick={addUser}>add</button>
             <span>{totalUsers}</span>
+            { error &&
+                <div className={s.messageError}>{error}</div>}
         </div>
     )
 }
